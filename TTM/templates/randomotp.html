@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Random OTP</title>
+</head>
+<body>
+<form action="{% url 'randomotp' %}" method="POST">
+  {% csrf_token %}
+  Enter the number of digits:<input type="text" name="number">
+  <input type="submit" value="Click here for OTP">
+
+    {{ results }}
+
+</form>
+</body>
+</html>
